@@ -1,0 +1,143 @@
+<div class="bg-blue-900 max-w-7xl mx-auto justify-between">
+    <mat-toolbar  class="bg-purple-700 max-w-10xl mx-auto text-white border-x ">
+
+        <mat-icon  color="bg-blue-600"  
+        class="mat-display-3">apps</mat-icon> &nbsp;
+        <a style="font-size: 40px;" routerLink="home">Infosys </a>
+        <span class="font-light ">&#174;</span>
+        &nbsp;
+        <span  style="font-size: 30px;">|  </span>
+        <span class="mr-20">MarketPlace</span>
+    
+            <!-- <mat-form-field class="mx-auto
+            pt-4  pr-7 justify-between" style="width :600px;">
+            <input type="tel" matInput placeholder="Search" >
+                    <mat-icon style=" color: black;">search</mat-icon>
+            
+            <input matInput placeholder="" value="">
+            </mat-form-field> -->
+
+            
+            <form class="example-form">
+            <mat-form-field class="example-full-width  p-5">
+            <span matPrefix> </span>
+            <input type="tel" matInput placeholder="How Can I help you today?" name= "search" >
+            <button matSuffix mat-button ><mat-icon style="color: black;" >search</mat-icon></button>
+            </mat-form-field>
+            <br/>
+            
+            </form>
+            
+
+<span class="m-14"></span>
+
+    <mat-icon>
+        <span class="material-symbols-rounded ">
+            sms
+            </span>  </mat-icon>
+            
+     <span class="font-light pr-2">
+            <a routerLink="home" id="aj" style=" background-color: #9718b4;
+            color: white;  ;" >Get Familiar Now</a>  
+    </span>
+
+
+  
+        <button style="background-color: #f6eef8; color: black;"
+        mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon
+        [matBadge]="1"
+        matBadgeColor="warn" 
+        
+        >person</mat-icon>
+
+        </button>
+    </mat-toolbar>
+    </div>
+
+
+
+    <form class="">
+
+    <mat-menu #menu="matMenu">
+        <div class="p-3  ">
+            <div >
+                <span class="mr-16" ><mat-icon>person</mat-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     <strong> Anand Jha</strong></span>
+                
+             
+                <p class="text-center font-light ">Infosys</p>
+            </div>
+            
+           
+            <div class="py-3 divide-y" style="text-align:center;">
+                <a  routerLink="home" style=" color:blueviolet;" class=""flex  font-light mb-2>
+                    View Profile  </a>
+     <br>
+            <a style=" color:blueviolet;" routerLink="home" class=""flex justify-between font-light mb-2>
+                My Bookmarks
+                
+            </a>
+        </div>
+   
+            <div class=" flex justify-between py-3 font-light">
+                <mat-icon style=" color:blueviolet;">login</mat-icon>
+                <a routerLink="" style=" color:blueviolet;"><strong>Log out</strong></a>
+            </div>
+            </div>  
+ 
+
+    </mat-menu>
+</form>
+
+
+<div class="max-w-7xl mx-auto justify-between">
+<button mat-button [matMenuTriggerFor]="aboveMenu">Home</button>
+<mat-menu #aboveMenu="matMenu" yPosition="above">
+  <button mat-menu-item>Engineering</button>
+  <button mat-menu-item>Business</button>
+  <button mat-menu-item>Knowledge</button>
+  <button mat-menu-item>Learning</button>
+</mat-menu>
+
+<button mat-button [matMenuTriggerFor]="belowMenu">MicroStores</button>
+<mat-menu #belowMenu="matMenu" yPosition="below">
+    <button mat-menu-item>Cobalt</button>
+    <button mat-menu-item>Innovation</button>
+    <button mat-menu-item>Knowledge</button>
+    <button mat-menu-item>Learning</button>
+</mat-menu>
+
+<button mat-button [matMenuTriggerFor]="beforeMenu">Domains</button>
+<mat-menu #beforeMenu="matMenu" xPosition="before">
+    <button mat-menu-item>Engineering</button>
+    <button mat-menu-item>Business</button>
+    <button mat-menu-item>Knowledge</button>
+    <button mat-menu-item>Learning</button>
+</mat-menu>
+
+
+<button mat-button [matMenuTriggerFor]="afterMenu">Categories</button>
+<mat-menu #afterMenu="matMenu" xPosition="after">
+    <button mat-menu-item>Engineering</button>
+    <button mat-menu-item>Business</button>
+    <button mat-menu-item>Knowledge</button>
+    <button mat-menu-item>Learning</button>
+</mat-menu>
+
+</div>
+
+
+<div class="bg-blue-900 max-w-7xl mx-auto justify-between">
+    <h2 style="text-align: center; color: aliceblue;"> Infosys Live Engineering Platform</h2>
+    <br>
+    <p class="pb-4" style="text-align: center; color: aliceblue;">An one-stop solution that provides intelligent insights to the business & IT teams to evolve as a hyper-productive product engineer.</p>
+   
+</div>
+
+
+<mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile><app-product-details></app-product-details></mat-grid-tile>
+    <mat-grid-tile><app-product-details></app-product-details></mat-grid-tile>
+    
+  </mat-grid-list>
